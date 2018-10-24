@@ -49,7 +49,8 @@
 - tail   -- done
 - uniq   -- done
 - join   
-- paste
+- paste -- done
+- column -- done
 
 ## 管理命令
 
@@ -158,7 +159,6 @@
 - zip/unzip
 - nroff/groff/troff
 - stdbuf
-- column
 
 ## Q&A
 
