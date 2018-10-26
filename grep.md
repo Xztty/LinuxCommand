@@ -22,6 +22,7 @@ grep -C "ERROR" log.txt
 grep -A "ERROR" log.txt
 grep -B "ERROR" log.txt
 grep -f pattern.txt log.txt
+grep --line-buffered error log.txt  | cut -f1   # 当grep的输出经过pipe时，会使用fully buffered模式，导致cut结果有延迟，尤其是log.txt文件太大
 ```
 
 ## RTFM progress
@@ -29,4 +30,6 @@ grep -f pattern.txt log.txt
 9.18 20%
 
 ## References
+
+- https://eklitzke.org/stdout-buffering
 

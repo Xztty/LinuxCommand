@@ -48,7 +48,7 @@
 - head   -- done
 - tail   -- done
 - uniq   -- done
-- join   
+- join   -- done
 - paste -- done
 - column -- done
 
@@ -126,7 +126,7 @@
 - nc -- done
 - wget/curl -- done
 - diff/patch -- done
-- tar/gzip/gunzip/zcat -- done
+- tar/gzip/gunzip/zip/unzip/zcat -- done
 - nohup -- done
 - printf -- done
 - tr -- done
@@ -135,13 +135,14 @@
 - uname -- done
 - vim/vimdiff -- done
 - tcpdump -- done
+- stdbuf  -- done
 - split -- done
 - ctags
 - rpm
 - yum
 - awk
 - scp/ftp
-- sz/rz
+- sz/rz -- done
 - mkfifo
 - time
 - reboot/shutdown
@@ -156,13 +157,7 @@
 - export
 - env
 - nmap
-- zip/unzip
 - nroff/groff/troff
-- stdbuf
-
-## Q&A
-
-- tail - | grep test    grep缓冲区如何关闭
 
 ## References
 
@@ -173,4 +168,4 @@
 - [我使用过的Linux命令系列总目录](http://codingstandards.iteye.com/blog/786653)
 - [Linux Perf Tools Full](http://www.brendangregg.com/Perf/linux_perf_tools_full.png)
 - [CentOS 7中ip命令将逐渐取代 ifconfig](https://www.cnblogs.com/liaojie970/p/5753350.html)
-
+- https://github.com/jaywcjlove/linux-command
