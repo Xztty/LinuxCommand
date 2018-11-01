@@ -63,6 +63,7 @@
 - chkconfig
 - quota
 - chroot
+- sysctl
 
 ## 磁盘操作相关
 
@@ -85,7 +86,7 @@
 
 ## 性能相关
 
-- sar
+- sar -- done
 - perf
 - vmstat -- done
 - mpstat
