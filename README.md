@@ -138,21 +138,22 @@
 - tcpdump -- done
 - stdbuf  -- done
 - split -- done
-- ctags
+- ctags -- done
+- yum -- done
+- ulimit -- done
+- sz/rz -- done
+- crontab -- done
+- dos2unix/iconv -- done 50%
 - rpm
-- yum
 - awk
 - scp/ftp
-- sz/rz -- done
 - mkfifo
 - time
 - reboot/shutdown
 - bc
 - mount/umount
-- dos2unix
 - swapon/swapoff
 - mkswap
-- ulimit
 - lsmod
 - locale
 - export
