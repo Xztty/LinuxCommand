@@ -41,6 +41,20 @@ wget 无法支持socks5代理
 ```text
 curl www.qq.com
 curl --socks5 127.0.0.1:1080 www.qq.com
+curl -XGET -H "X-Forwarded: 104.107.31.37" "http://xxx..com/myip"      # 发送GET请求，指定Header
+```
+
+POST请求示例
+
+```text
+curl -XPOST localhost:9000/graphs/getEdges -H 'Content-Type: Application/json' -d '
+{
+  "srcVertices": [{"serviceName": "KakaoFavorites", "columnName": "userName", "id":"Elmo"}],
+  "steps": [
+    {"step": [{"label": "friends", "direction": "out", "offset": 0, "limit": 10}]}
+  ]
+}
+'
 ```
 
 ### RTFM
@@ -49,3 +63,4 @@ curl --socks5 127.0.0.1:1080 www.qq.com
 ## References
 
 - [wget整站下载被robots.txt阻挡时的处理方法](https://www.sudops.com/wget-recursive-download-blocked-by-robots-txt.html)
+
