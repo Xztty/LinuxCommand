@@ -46,6 +46,9 @@ less -N a.log # 显示行号
 - tag 是什么意思？
 - line editing 怎么使用？
 - 试验发现，less可以读取 .gz 结尾的压缩文件的内容，类似zcat
+- 使用GBK编码的文件中含有中文，使用vim打开可以正常显示，但是less查看乱码，并且设置了export LANG="zh_CN.GBK"后还是乱码，原因分析？
+- 打开文件后，内部命令显示当前百分比？
+- export LESSCHARSET=gb18030 后，执行less 命令，报错 `invalid charset name`, 为什么？
 
 
 ## References
