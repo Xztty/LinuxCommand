@@ -1,38 +1,5 @@
 
-# kill/ps/pstree
-
-## kill
-
-`type -a kill` 看到 kill 默认是shell内置命令。
-
-    kill is a shell builtin
-    kill is /usr/bin/kill
-
-kill 用于给进程或者进程组发送相应信号，当kill指向的是线程号时，信号还是会往线程所在进程发送
-
-### 常用信号
-
-    HUP     1     终端断线
-    INT     2     中断（同 Ctrl + C）
-    QUIT    3     退出（同 Ctrl + \）
-    TERM    15    终止
-    KILL    9     强制终止
-    CONT    18    继续（与STOP相反， fg/bg命令）
-    STOP    19    暂停（同 Ctrl + Z）
-    
-### 常用示例
-
-```text
-kill 100              # 向进程pid 100 发送TERM信号
-kill -TERM 100        # 向进程pid 100 发送TERM信号
-kill -9 100           # 强制杀死进程pid 100
-kill -l               # 查看信号
-kill -- -<process group id>  # 向进程组发信号
-```
-
-### RTFM progress
-
-9.19 done
+# ps/pstree
 
 ## ps 
 
@@ -79,7 +46,6 @@ ps -u test             # 查看用户test的进程信息
 
 9.20 done
 
-
 ## pstree
 
 显示进程树状结构
@@ -88,10 +54,11 @@ ps -u test             # 查看用户test的进程信息
 
 ```text
 pstree -n                     # 排序
+pstree -p ${pid}
 pstree -h                     # 高亮当前进程及其父进程
 pstree -a                     # 显示参数
-pstree -H 18244 -c            # 高亮指定pid，展开显示
-pstree -c -a 18244            # 指定pid显示树状结构
+pstree -H ${pid} -c            # 高亮指定pid，展开显示
+pstree -c -a ${pid}            # 指定pid显示树状结构
 ```
 
 ### RTFM

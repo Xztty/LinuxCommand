@@ -1,5 +1,5 @@
 
-# command 
+# dmesg 
 
 ## 介绍
 

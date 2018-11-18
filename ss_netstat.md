@@ -32,9 +32,9 @@ ss -o state established '( dport = :ssh or sport = :ssh )'
 
 ```text
 netstat -an
-netstat -tn
-netstat -un
 netstat -anp
+netstat -atn
+netstat -aun
 nesstat -nlp
 netstat -4 -tnlp      
 netstat -unlp

@@ -143,9 +143,10 @@
 - ulimit -- done
 - sz/rz -- done
 - crontab -- done
-- dos2unix/iconv -- done 50%
+- dos2unix/iconv -- done
+- awk -- done
 - rpm
-- awk
+- reset
 - scp/ftp
 - mkfifo
 - time
