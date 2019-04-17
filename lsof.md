@@ -19,7 +19,8 @@
 ## 常用示例
 
 ```text
-lsof                       # 查看素有
+lsof                       # 查看所有
+lsof /dev/log              # 打开文件的进程
 lsof -u root               # 查看指定用户
 lsof -u ^root              # 查看非root用户
 lsof -p 28553              # 查看指定pid
@@ -28,7 +29,6 @@ lsof -c nc                 # 查看进程名为nc的打开情况
 lsof -i :90                # 查看打开端口80
 lsof -i 4TCP               # 查看ipv4 udp情况
 lsof -i 4 -a -p 1234,1235  # 查看ipv4 且 进程 1234/1235 打开文件
-lsof /dev/log              # 打开文件的进程
 ```
 
 lsof fd列含义
@@ -59,6 +59,9 @@ lsof fd列含义
 - 空格：表示该文件的状态模式为unknow，且没有锁定。
 - -：表示该文件的状态模式为unknow，且被锁定。
 
+## Q&A
+
+lsof中看到的端口不是个数字, 哪个参数?
 
 ## RTFM
 

@@ -34,12 +34,14 @@ tcpdump -i any dst host 127.0.0.1
 tcpdump -i any tcp and dst host 127.0.01 and dst port 
 tcpdump -i eth0  greater 1024             # 指定包大小
 tcpdump -i eth0  less 1024             # 指定包大小
-tcpdump -i eth0 host 192.168.0.100 and \(192.168.0.101 or 192.168.0.102\)`   # 指定机器间通信
+tcpdump -i eth0 host 192.168.0.100 and \(192.168.0.101 or 192.168.0.102\)   # 指定机器间通信
 tcpdump -i any  host ! 127.0.0.1 and greater 305 -nn            # 指定非127.0.0.1的包
 tcpdump -i any 'tcp[tcpflags] & tcp-syn != 0'                  # tcp-fin, tcp-syn, tcp-rst, tcp-push, tcp-act, tcp-urg
 tcpdump -i any 'tcp[13] & 2!=0'    # 判断指定字节，功能同上
 tcpdump -i any udp and src host 10.0.0.1 -Xnlps0 -w  ~/out.pcap
 tcpdump -nvX src net 192.168.0.0/16 and dst net 10.0.0.0/8 or 172.16.0.0/16  # 指定网络
+tcpdump -i any tcp and port 1389 and greater 100                    # 包长度 >= 100, 或者less 100 表示 <= 100
+tcpdump -i any icmp                                             # 抓取icmp包
 ```
 
 ## expression介绍
@@ -50,13 +52,13 @@ expression用于包过滤，支持语法丰富：包大小、包中的Flags、�
 
 ## promiscuous mode(混杂模式)
 
-混杂模式下网卡将来自接口的所有数据都捕获并交给相应的驱动程序（即不验证MAC地址），可以用与监听网络数据
+混杂模式下网卡将来自接口的所有数据都捕获并交给相应的驱动程序（即不验证MAC地址），可以用与监听网络数据, Linux下any interface 无法使用混杂模式
 
 `-p` 选项可以开启混杂模式
 
 ## Q&A
 
-### 编写echo server/client, client -> server 发包10w，server显示收到10w，但通过tcpdump抓包得到结果1.4w条，tcpdump性能很差？
+### 编写udp echo server/client, client -> server 发包10w，server显示收到10w，但通过tcpdump抓包得到结果1.4w条，tcpdump性能很差？
 
 这位tcpdump抓包结束后输出
 
@@ -72,6 +74,21 @@ expression用于包过滤，支持语法丰富：包大小、包中的Flags、�
 ### 当系统发生丢包时，可以通过tcpdump抓包到吗？有什么办法抓到包？
 
 ?
+
+### 被防火墙丢弃的包，或者配置了某些防火墙规则的包能否抓到
+
+能, https://serverfault.com/questions/233302/will-tcpdump-see-packets-that-are-being-dropped-by-iptables
+
+### 系统处理网络包经过了哪些栈/模块？
+
+### 如何指定抓包输出，从指定层开始？如需要看TCP层数据/ICMP的数据？
+
+-e 选项可以屏蔽ethernet link head, 通过wireshark抓包看到 Ethernet II的包长度为14字节
+
+### tcpdump outbound packet 出去的包末尾有16字节0，为什么？
+
+
+
 
 ## RTFM
 

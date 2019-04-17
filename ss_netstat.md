@@ -33,6 +33,7 @@ ss -o state established '( dport = :ssh or sport = :ssh )'
 ```text
 netstat -an
 netstat -anp
+netstat -anep                               -e 查看更多消息，可以看到inode，与lsof结合使用
 netstat -atn
 netstat -aun
 nesstat -nlp

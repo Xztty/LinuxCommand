@@ -42,6 +42,10 @@ export MANPAGER='/usr/bin/less -ismM'
 export LESS='r+Gg'
 ```
 
+### Tricks And Tips
+
+vim中移动到对应函数 `Shift+k` 跳转到man手册
+
 ### RTFM
 
 10.3 done

@@ -31,6 +31,10 @@ strace提供了跟踪指定系统调用的能力，具体参看man page，同时
 - -e trace=desc
 - -e trace=memory
 
+### 输出字段解释
+
+TODO
+
 ### RTFM
 
 10.7 done

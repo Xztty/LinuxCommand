@@ -31,9 +31,17 @@
 
 ## 网络相关
 
-- ip/ifconfig  -- done
+- ip/ip-route/ifconfig  -- done
 - ss/netstat   -- done
-- route
+- nc -- done
+- nmap
+- ipcalc
+- dig
+- ping -- done
+- traceroute
+- telnet
+- arp
+- nslookup
 
 ## 文件编辑相关
 
@@ -60,6 +68,9 @@
 - chmod/chown/chgrp   -- done
 - service
 - systemctl
+- journalctl
+- iptables
+- hostnamectl
 - chkconfig
 - quota
 - chroot
@@ -76,6 +87,7 @@
 - vgcreate
 - lvcreate
 - mknod
+- blktrace
 
 ## IPC相关命令
 
@@ -92,9 +104,15 @@
 - mpstat
 - iostat
 - pidstat
+- nicstat
 - strace/ltrace  -- done 
-- dmesg
+- mtrace
+- dmesg -- done
 - slabtop
+- iotop
+- htop
+- gprof
+- iperf
 
 ## 编译相关
 
@@ -104,6 +122,8 @@
 - nm
 - gdb
 - gcc
+- strings
+- install
 
 ## 其他命令
 
@@ -124,7 +144,6 @@
 - man/info -- done
 - which/whatis/apropos/whereis/type -- done
 - id/whoami/logname -- done
-- nc -- done
 - wget/curl -- done
 - diff/patch -- done
 - tar/gzip/gunzip/zip/unzip/zcat -- done
@@ -146,7 +165,8 @@
 - dos2unix/iconv -- done
 - awk -- done
 - rpm
-- reset
+- repoquery -- done
+- reset --  done
 - scp/ftp
 - mkfifo
 - time
@@ -159,8 +179,10 @@
 - locale
 - export
 - env
-- nmap
 - nroff/groff/troff
+- valgrind
+
+- timeout -- done
 
 ## References
 

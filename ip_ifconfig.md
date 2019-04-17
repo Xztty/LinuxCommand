@@ -11,6 +11,9 @@
 ip addr show
 ip addr add 192.168.1.10/24 dev eth0
 
+ip route add 192.168.1.0/24 dev eth0 scope link         # 增加路由表
+ip route del 192.168.1.0/24 dev eth0 scope link         # 删除路由表
+
 ip link set enp0s3 up
 ip link set enp0s3 down
 ```
