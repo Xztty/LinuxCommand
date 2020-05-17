@@ -14,6 +14,7 @@ ls *.log | xargs -n1 -t -I {}  cp {} /tmp     # 使用-t 将执行命令打出�
 find /tmp -name core -type f -print0 | xargs -0 -n10 /bin/rm -f        # -0 表示使用 null character作为标准输入的参数分隔符
 echo '11@22@33' | xargs -p -d '@'  echo       # -p 询问是否执行命令，输入y/Y执行
 cut -d: -f1 < /etc/passwd | sort | xargs echo 
+cat ~/filelist | xargs -n 100 -P 20 grep "XXXXX"                    # -P 可以支持多个进程并发执行
 ```
 
 ## Q&A
@@ -25,6 +26,7 @@ cut -d: -f1 < /etc/passwd | sort | xargs echo
 ### man中的example  `xargs sh -c 'emacs "$@" < /dev/tty' emacs` 怎么解释
 
 https://stackoverflow.com/questions/41043163/xargs-sh-c-skipping-the-first-argument
+
 
 ## RTFM
 

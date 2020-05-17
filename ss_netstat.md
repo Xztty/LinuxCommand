@@ -11,7 +11,7 @@ dump socket统计信息
 ss -a          # 显示所有socket信息
 ss -s          # 统计信息，有大量socket时使用
 ss -l          # 显示监听端口的socket信息
-ss -p          # 显示进程信息
+ss -p -t -n    # 显示进程信息, tcp链接和端口
 ss -4t         # ipv4 tcp信息
 ss -4u           
 ss -a state time-wait  # 指定过滤状态

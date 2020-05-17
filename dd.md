@@ -25,7 +25,16 @@ dd if=test.txt of=/dev/zero bs=64k count=4k iflag=direct   # 磁盘连续读取�
 
 ## Q&A
 
-- direct I/O 具体是什么？
+### direct I/O 具体是什么？
+
+
+
+### 使用dd命令可以测试出来峰值吗？ 
+
+测试发现不能，dd命令写入时iostat 中util使用率没有达到上限，另外当同时执行两个dd命令时，发现iostat util有上升，每个dd命令的写入速度没有太大变化。
+
+### 如何测试随机写的性能？
+
 
 ## References
 

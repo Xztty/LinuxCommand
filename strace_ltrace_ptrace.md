@@ -19,6 +19,8 @@ strace -x -p pid                # 将non-ASCII字符以16进制显示
 strace -s 64 -p pid             # 调整输出中的字符长度
 ```
 
+注: strace默认只跟踪主线程的调用情况，针对多线程的程序需要使用`-f`才能更好看到信息
+
 ### -e expr
 
 strace提供了跟踪指定系统调用的能力，具体参看man page，同时提供了几种快捷方式

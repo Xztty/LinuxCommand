@@ -10,7 +10,7 @@
 ```bash
 ip addr show
 ip addr add 192.168.1.10/24 dev eth0
-
+ip route add default via 192.168.190.105 dev eth0 proto static metric 100
 ip route add 192.168.1.0/24 dev eth0 scope link         # 增加路由表
 ip route del 192.168.1.0/24 dev eth0 scope link         # 删除路由表
 

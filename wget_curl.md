@@ -40,6 +40,7 @@ wget 无法支持socks5代理
 
 ```text
 curl www.qq.com
+curl -L www.facebook.com                                               # Follow Redirection, curl默认不会
 curl --socks5 127.0.0.1:1080 www.qq.com
 curl -XGET -H "X-Forwarded: 104.107.31.37" "http://xxx..com/myip"      # 发送GET请求，指定Header
 curl -X POST -H 'Content-Type: application/json' "http://xxx.com" -d @datafile.txt  # 通过-d @+文件名，指定post的数据从文件读取
