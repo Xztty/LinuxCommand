@@ -32,6 +32,7 @@ ps -ef | grep [s]shd
 
 ### 匹配pattern如何关闭BRE语法，当成普通字符串？
 
+`-F` 即可
 
 
 
