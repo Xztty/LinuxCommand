@@ -8,6 +8,7 @@
 ## 示例
 
 ```text
+stdbuf -oL tcpdump -i any arp |  grep 192.168                        # 
 tail -f access.log | stdbuf -oL cut -d ' ' -f1 | uniq                # 使cut命令的输出缓冲区使用换行
 ```
 
