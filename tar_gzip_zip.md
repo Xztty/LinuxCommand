@@ -59,8 +59,10 @@ gzip -9 a.tar                                                       # -9 压缩�
 
 ```text
 zip -r a.zip src_code           # 打包压缩目录及目录下文件
+zip -9r -P'123456' test.zip readme.txt   # 加密
 unzip a.zip                     # 解压到当前目录
 unzip a.zip -d /tmp/test        # 解压到临时目录
+unzip -P'123456' test.zip # 解密
 ```
 
 ### RTFM
